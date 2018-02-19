@@ -1,0 +1,29 @@
+{
+  "name": "flickerfusion",
+  "productName": "FlickerFusion",
+  "version": "1.0.0",
+  "description": "Visual Flicker stimuli to calculate individual fusion thresholds",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-packager . --out=dist --icon ./icon.icns --platform=darwin --overwrite --tmpdir=false",
+    "osx-sign": "codesign --deep --force --verbose -s 'Developer ID Application: Taylor Hanayik' './dist/flickerfusion-darwin-x64/flickerfusion.app'",
+    "startAppWithLogging": "'./dist/flickerfusion-darwin-x64/flickerfusion.app/Contents/MacOS/flickerfusion'"
+  },
+  "keywords": [
+    "flicker",
+    "fusion",
+    "vision",
+    "timing"
+  ],
+  "author": "Taylor Hanayik",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.7.5",
+    "electron-packager": "^8.7.2"
+  },
+  "dependencies": {
+    "mathjs": "^3.16.2",
+    "two.js": "^0.6.0"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flicker Fusion</title>
+  </head>
+  <body id="body" style="overflow:hidden; margin:0px;">
+    <div class="container" style="display:flex; flex-direction: column; width: 100%; height:100%;">
+      <div class="color-menu" style="display:flex; width: 100%; height: 50px; background-color:white;">
+        <div class="color1" style="display:flex; width:100%; align-items:center; align-content:center; justify-content:center;">
+          <div class="text1" style="margin-right:10px;">
+            Color 1:
+            <input id="slider1" type="range" value="0" min="1" max="360" step="1" style="width:350px; margin-left:5px;"/>
+            <span id=sliderVal1>0</span>
+          </div>
+          <div id="colorBox1" class="colorBox1" style="width:60px; height:40px; background-color:red;"></div>
+        </div>
+        <div class="color2" style="display:flex; width:100%; align-items:center; align-content:center; justify-content:center;">
+          <div class="text2" style="margin-right:10px;">
+            Color 2:
+            <input id="slider2" type="range" value="0" min="1" max="360" step="1" style="width:350px; margin-left:5px;"/>
+            <span id="sliderVal2">0</span>
+          </div>
+          <div id="colorBox2" class="colorBox2" style="width:60px; height:40px; background-color:green;"></div>
+        </div>
+      </div>
+      <div id="flicker" class="flicker">
+
+      </div>
+
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./two.js')
+    require('./rend.js')
+  </script>
+</html>
