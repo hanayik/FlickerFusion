@@ -77,7 +77,7 @@ function startAnimation () {
     //console.log(rect2.fill)
     //console.log(two.timeDelta)
     //console.log(frameCount)
-    if (frameCount > 500) {
+    if (frameCount > 0) {
       a.push(two.timeDelta)
       if (a[0] == null) {
         a = []
